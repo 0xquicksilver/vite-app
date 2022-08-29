@@ -10,7 +10,7 @@ const isTest = process.env.NODE_ENV === "test" || !!process.env.VITE_TEST_BUILD;
 const resolve = (p: string) => path.resolve(__dirname, p);
 
 const getStyleSheets = async () => {
-  const assetpath = resolve("dist/assets");
+  const assetpath = resolve("dist/client/assets");
   const files = await fs.readdir(assetpath);
   const cssAssets = files.filter(l => l.endsWith(".css"));
   const allContent = [];
